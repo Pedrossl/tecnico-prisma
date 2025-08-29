@@ -1,10 +1,6 @@
 
 # Título do Projeto
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
-
-Com certeza\! Aqui está o conteúdo completo em formato Markdown. Você pode copiar este bloco de código e colar em um arquivo com a extensão `.md` (por exemplo, `README.md`).
-
 ```md
 # API de Restaurante com Node.js, TypeScript, Prisma & MySQL
 
