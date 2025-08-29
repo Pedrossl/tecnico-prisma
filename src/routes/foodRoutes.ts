@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { createPerson, getPersons } from "../controllers/personController.ts";
+import * as foodController from "../controllers/foodController";
 
 const foodRoutes = Router();
 
-foodRoutes.get("/", getPersons);
-foodRoutes.post("/", createPerson);
+foodRoutes.get("/", foodController.getFoods);
+foodRoutes.get("/:id", foodController.getFoodById);
+foodRoutes.post("/", foodController.createFood);
 
 export default foodRoutes;
