@@ -123,7 +123,7 @@ Com o schema definido, crie as tabelas no banco de dados e gere o Prisma Client.
 
 ```bash
 # Cria uma nova migração e aplica as mudanças ao banco de dados
-npx prisma migrate dev --name init
+npx prisma migrate dev
 
 # Gera o Prisma Client com base no schema atualizado
 npx prisma generate
