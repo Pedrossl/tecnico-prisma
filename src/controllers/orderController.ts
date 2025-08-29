@@ -17,3 +17,16 @@ export const createOrder = async (req: Request, res: Response) => {
   });
   res.status(201).json(order);
 };
+
+export const getOrderById = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const order = await prisma.order.findUnique({
+    where: { id: Number(id) },
+    include: { person: true, food: true },
+  });
+  if (order) {
+    res.json(order);
+  } else {
+    res.status(404).json({ error: "Order not found" });
+  }
+};
