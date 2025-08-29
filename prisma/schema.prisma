@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id     Int     @id @default(autoincrement())
+  name   String
+  email  String  @unique
+  orders Order[]
+}
+
+model Food {
+  id    Int    @id @default(autoincrement())
+  name  String
+  price Float
+
+  orders Order[]
+}
+
+model Order {
+  id        Int      @id @default(autoincrement())
+  person    Person   @relation(fields: [personId], references: [id])
+  personId  Int
+  food      Food     @relation(fields: [foodId], references: [id])
+  foodId    Int
+  quantity  Int
+  createdAt DateTime @default(now())
+}
