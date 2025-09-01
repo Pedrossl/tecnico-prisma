@@ -58,6 +58,9 @@ npx tsc --init
 
 # Inicializar o Prisma (cria a pasta /prisma e o arquivo .env)
 npx prisma init
+
+# Ajustar importações no tsconfig
+"allowSyntheticDefaultImports": true,
 ```
 
 ### 3\. Variáveis de Ambiente
