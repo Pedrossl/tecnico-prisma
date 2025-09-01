@@ -41,6 +41,8 @@ npm init -y
 Agora, instale as dependências de produção e de desenvolvimento.
 
 ```bash
+npm init -y
+
 # Dependências de produção
 npm install express @prisma/client
 
